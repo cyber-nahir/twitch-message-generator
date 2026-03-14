@@ -356,3 +356,30 @@ hr {
 .toast.show {
   transform: translateX(-50%) translateY(0);
 }
+
+.neon {
+  --neon-color: #ff69b4;
+  --min-intensity: 10px;
+  --max-intensity: 30px;
+
+  color: #fff;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #ff69b4,
+    0 0 80px #ff69b4, 0 0 90px #ff69b4, 0 0 100px #ff69b4, 0 0 150px #ff69b4;
+  animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    text-shadow: 0 0 calc(var(--min-intensity) * 0.2) var(--neon-color),
+      0 0 calc(var(--min-intensity) * 0.5) var(--neon-color),
+      0 0 var(--min-intensity) var(--neon-color);
+  }
+
+  to {
+    text-shadow: 0 0 calc(var(--max-intensity) * 0.2) var(--neon-color),
+      0 0 calc(var(--max-intensity) * 0.3) var(--neon-color),
+      0 0 var(--max-intensity) var(--neon-color),
+      0 0 calc(var(--max-intensity) * 1.5) var(--neon-color);
+  }
+}
