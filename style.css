@@ -274,6 +274,8 @@ hr {
   width: 16px;
   height: 16px;
   display: block;
+  position: relative;
+  top: 5px;
 }
 .msg-author-inline {
   font-weight: 700;
